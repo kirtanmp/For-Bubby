@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Yatri!!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #fff;
+    }
+
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #fff;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 25px;
+      background: #ff6b81;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #ff4757;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Yatri!</h1>
+    <p class="subtitle">To the most amazing person in my life</p>
+
+    <div class="card">
+      <h2>A Message For You</h2>
+      <p>
+        Happy birthday bubs ❤️  
+        I just wanted to make something small to show how much you mean to me.  
+        You make my life better every single day and I’m so lucky to have you.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Why I Love You</h2>
+      <ul style="text-align:left;">
+        <li>You always support me no matter what</li>
+        <li>You're my biggest hype man</li>
+        <li>You've shown me more love than I've ever felt before</li>
+        <li>Your smile >>> everything</li>
+        <li>You put up with me 😄</li>
+      </ul>
+    </div>
+    
+    <div class="card">
+  <h2>Countdown to Our Next Date ❤️</h2>
+  <p id="countdown" style="font-size: 1.5em; font-weight: bold;"></p>
+</div>
+
+<script>
+  // Set your next date here
+  const nextDate = new Date("May 08, 2026 19:00:00").getTime();
+
+  const countdown = setInterval(function () {
+    const now = new Date().getTime();
+    const distance = nextDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+    document.getElementById("countdown").innerHTML =
+      days + " days, " + hours + " hours, " + minutes + " minutes";
+
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("countdown").innerHTML =
+        "It's date time ❤️";
+    }
+  }, 1000);
+</script>
+
+    <div class="card">
+    <h2>Our Song 🎵</h2>
+
+    <iframe 
+        allow="autoplay *; encrypted-media *;"
+        frameborder="0"
+        height="150"
+        style="width:100%; max-width:660px; overflow:hidden; background:transparent; border-radius:12px;"
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        src="https://embed.music.apple.com/us/album/o-maahi-from-dunki/1720723961?i=1720723962">
+    </iframe>
+    </div>
+
+    <div class="card gallery">
+      <h2>Our Memories 📸</h2>
+      <!-- Replace these with your own images -->
+      <img src="pic1.jpeg" alt="memory1">
+      <img src="pic2.jpeg" alt="memory2">
+      <img src="pic3.jpeg" alt="memory2">
+    </div>
+
+    <button onclick="showSurprise()">Click for a Surprise 🎁</button>
+
+    <div id="surprise" class="card hidden">
+      <h2>Surprise ❤️</h2>
+      <p>
+        I love you so much.  
+        And I can't wait to make a million more memories with you. I'm grateful to Maharaj and Swami that they put you in my life.
+        Thank you for being you and I could never ask for more my love.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById('surprise').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
+
